@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tugas JavaScript | Aditya Pratama</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-slate-950 text-white">
+
+
+<nav class="bg-slate-900 border-b border-slate-800">
+
+    <div class="max-w-6xl mx-auto px-6 py-4">
+
+        <div class="flex justify-between items-center">
+
+            <a href="index.html"
+               class="text-xl font-bold text-blue-400">
+                Aditya<span class="text-white">.Dev</span>
+            </a>
+
+            <div class="hidden md:flex gap-8">
+
+                <a href="index.html"
+                   class="text-gray-300 hover:text-white">
+                    Home
+                </a>
+
+                <a href="about.html"
+                   class="text-gray-300 hover:text-white">
+                    About
+                </a>
+
+                <a href="projects.html"
+                   class="text-gray-300 hover:text-white">
+                    Projects
+                </a>
+
+                <a href="javascript.html"
+                   class="text-blue-400">
+                    JavaScript
+                </a>
+
+                <a href="contact.html"
+                   class="text-gray-300 hover:text-white">
+                    Contact
+                </a>
+
+            </div>
+
+            <button id="menuButton"
+                    class="md:hidden text-2xl">
+                ☰
+            </button>
+
+        </div>
+
+        <div id="mobileMenu"
+             class="hidden md:hidden pt-4 space-y-3">
+
+            <a href="index.html" class="block">Home</a>
+            <a href="about.html" class="block">About</a>
+            <a href="projects.html" class="block">Projects</a>
+            <a href="javascript.html" class="block text-blue-400">
+                JavaScript
+            </a>
+            <a href="contact.html" class="block">Contact</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="py-20">
+
+    <div class="max-w-xl mx-auto px-6">
+
+        <div class="text-center mb-10">
+
+            <p class="text-blue-400 font-semibold">
+                TUGAS JAVASCRIPT
+            </p>
+
+            <h1 class="text-4xl font-bold mt-2">
+                Kalkulator Nilai Mahasiswa
+            </h1>
+
+            <p class="text-gray-400 mt-4">
+                Hitung nilai akhir dan grade berdasarkan
+                nilai Tugas, UTS, dan UAS.
+            </p>
+
+        </div>
+
+
+        <div class="bg-slate-900 border border-slate-800
+                    rounded-2xl p-6 sm:p-8">
+
+            <div class="space-y-5">
+
+                <!-- TUGAS -->
+                <div>
+
+                    <label class="block mb-2 font-semibold">
+                        Nilai Tugas
+                    </label>
+
+                    <input type="number"
+                           id="tugas"
+                           min="0"
+                           max="100"
+                           placeholder="Masukkan nilai tugas"
+                           class="w-full bg-slate-800
+                                  border border-slate-700
+                                  rounded-lg px-4 py-3
+                                  outline-none
+                                  focus:border-blue-500
+                                  focus:ring-2
+                                  focus:ring-blue-500/30">
+
+                </div>
+
+
+                <!-- UTS -->
+                <div>
+
+                    <label class="block mb-2 font-semibold">
+                        Nilai UTS
+                    </label>
+
+                    <input type="number"
+                           id="uts"
+                           min="0"
+                           max="100"
+                           placeholder="Masukkan nilai UTS"
+                           class="w-full bg-slate-800
+                                  border border-slate-700
+                                  rounded-lg px-4 py-3
+                                  outline-none
+                                  focus:border-blue-500
+                                  focus:ring-2
+                                  focus:ring-blue-500/30">
+
+                </div>
+
+
+                <!-- UAS -->
+                <div>
+
+                    <label class="block mb-2 font-semibold">
+                        Nilai UAS
+                    </label>
+
+                    <input type="number"
+                           id="uas"
+                           min="0"
+                           max="100"
+                           placeholder="Masukkan nilai UAS"
+                           class="w-full bg-slate-800
+                                  border border-slate-700
+                                  rounded-lg px-4 py-3
+                                  outline-none
+                                  focus:border-blue-500
+                                  focus:ring-2
+                                  focus:ring-blue-500/30">
+
+                </div>
+
+
+                <button onclick="hitungNilai()"
+                        class="w-full bg-blue-600
+                               hover:bg-blue-700
+                               py-3 rounded-lg
+                               font-semibold
+                               transition">
+
+                    Hitung Nilai
+
+                </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div id="hasil"
+                 class="hidden mt-8 bg-slate-800
+                        rounded-xl p-6">
+
+                <h2 class="text-xl font-bold mb-5">
+                    Hasil Perhitungan
+                </h2>
+
+                <div class="space-y-3">
+
+                    <div class="flex justify-between">
+                        <span class="text-gray-400">
+                            Nilai Akhir
+                        </span>
+
+                        <span id="nilaiAkhir"
+                              class="font-bold text-blue-400">
+                        </span>
+                    </div>
+
+                    <div class="flex justify-between">
+
+                        <span class="text-gray-400">
+                            Grade
+                        </span>
+
+                        <span id="grade"
+                              class="font-bold">
+                        </span>
+
+                    </div>
+
+                    <div class="flex justify-between">
+
+                        <span class="text-gray-400">
+                            Keterangan
+                        </span>
+
+                        <span id="keterangan"
+                              class="font-bold">
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="border-t border-slate-800 py-8 text-center text-gray-400">
+    © 2026 Aditya Pratama
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

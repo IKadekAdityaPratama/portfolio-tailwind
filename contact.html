@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Aditya Pratama</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-slate-950 text-white">
+
+
+<nav class="bg-slate-900 border-b border-slate-800">
+
+    <div class="max-w-6xl mx-auto px-6 py-4">
+
+        <div class="flex justify-between items-center">
+
+            <a href="index.html"
+               class="text-xl font-bold text-blue-400">
+                Aditya<span class="text-white">.Dev</span>
+            </a>
+
+            <div class="hidden md:flex gap-8">
+
+                <a href="index.html" class="text-gray-300 hover:text-white">
+                    Home
+                </a>
+
+                <a href="about.html" class="text-gray-300 hover:text-white">
+                    About
+                </a>
+
+                <a href="projects.html" class="text-gray-300 hover:text-white">
+                    Projects
+                </a>
+
+                <a href="javascript.html" class="text-gray-300 hover:text-white">
+                    JavaScript
+                </a>
+
+                <a href="contact.html" class="text-blue-400">
+                    Contact
+                </a>
+
+            </div>
+
+            <button id="menuButton"
+                    class="md:hidden text-2xl">
+                ☰
+            </button>
+
+        </div>
+
+        <div id="mobileMenu"
+             class="hidden md:hidden pt-4 space-y-3">
+
+            <a href="index.html" class="block">Home</a>
+            <a href="about.html" class="block">About</a>
+            <a href="projects.html" class="block">Projects</a>
+            <a href="javascript.html" class="block">JavaScript</a>
+            <a href="contact.html" class="block text-blue-400">Contact</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="py-20">
+
+    <div class="max-w-4xl mx-auto px-6">
+
+        <div class="text-center mb-12">
+
+            <p class="text-blue-400 font-semibold">
+                CONTACT
+            </p>
+
+            <h1 class="text-4xl font-bold mt-2">
+                Hubungi Saya
+            </h1>
+
+            <p class="text-gray-400 mt-4">
+                Silakan hubungi saya melalui informasi berikut.
+            </p>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-slate-900 border border-slate-800
+                        rounded-xl p-7">
+
+                <h2 class="text-xl font-bold mb-6">
+                    Informasi Kontak
+                </h2>
+
+                <div class="space-y-5">
+
+                    <div>
+                        <p class="text-gray-500 text-sm">
+                            Email
+                        </p>
+
+                        <p class="text-gray-300 mt-1">
+                            ikadekadityapratama@gmail.com
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-500 text-sm">
+                            Instagram
+                        </p>
+
+                        <p class="text-gray-300 mt-1">
+                            @adtyane
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-500 text-sm">
+                            Lokasi
+                        </p>
+
+                        <p class="text-gray-300 mt-1">
+                            Bali, Indonesia
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="bg-slate-900 border border-slate-800
+                        rounded-xl p-7">
+
+                <h2 class="text-xl font-bold mb-6">
+                    Kirim Pesan
+                </h2>
+
+                <form onsubmit="kirimPesan(event)"
+                      class="space-y-4">
+
+                    <input type="text"
+                           placeholder="Nama"
+                           required
+                           class="w-full bg-slate-800
+                                  border border-slate-700
+                                  rounded-lg px-4 py-3
+                                  focus:outline-none
+                                  focus:border-blue-500">
+
+                    <input type="email"
+                           placeholder="Email"
+                           required
+                           class="w-full bg-slate-800
+                                  border border-slate-700
+                                  rounded-lg px-4 py-3
+                                  focus:outline-none
+                                  focus:border-blue-500">
+
+                    <textarea rows="5"
+                              placeholder="Pesan"
+                              required
+                              class="w-full bg-slate-800
+                                     border border-slate-700
+                                     rounded-lg px-4 py-3
+                                     focus:outline-none
+                                     focus:border-blue-500"></textarea>
+
+                    <button type="submit"
+                            class="w-full bg-blue-600
+                                   hover:bg-blue-700
+                                   py-3 rounded-lg
+                                   font-semibold">
+
+                        Kirim Pesan
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="border-t border-slate-800 py-8 text-center text-gray-400">
+    © 2026 Aditya Pratama
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
